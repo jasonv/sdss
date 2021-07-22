@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Chicago</title>
+    <meta name="generator" content="BBEdit 8.2">
+    <style type="text/css" title="text/css">
+    <!--
+        body
+        {
+            font-family: helvetica, arial, sans-serif;
+            background-color: black;
+            text-color: white;
+        }
+        .center 
+        {
+          text-align: center
+        } 
+        .imageViewer
+        {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 800px;
+            height: 450px;
+        }
+        
+        .imageViewer .well, .imageViewer .surface
+        {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            width: 800px;
+            height: 450px;
+            top: 0px;
+            left: 0px;
+            cursor: default;
+            border: 1px solid black;
+        }
+        
+        .imageViewer .well
+        {
+         overflow: hidden;
+        }
+        
+        .imageViewer .surface        
+        {
+            background-color: transparent;
+            background-image: URL("center.gif");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        
+        .imageViewer .status
+        {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 480px;
+            left: 0px;
+            display: none;
+        }
+        
+            .imageViewer .well .tile
+            {
+                border: 4;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                display: block;
+                background-color: transparent;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            
+            .imageViewer .well .tile .surface
+            {
+                background-color: transparent;
+                background-image: URL("center.gif");
+                background-repeat: no-repeat;
+                background-position: center center;
+            } 
+        .imageViewer .zoom        
+        {
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 48px;
+            height: 20px;
+            margin: 0;
+            padding: 0 0 0 4px;
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: bold;
+            border-left: 1px solid black;
+            border-top: 1px solid black;
+        }
+        
+            .imageViewer .zoom a
+            {
+                text-decoration: none;
+            }
+        
+            .imageViewer .zoom .dump
+            {
+                font-size: 16px;
+            }
+        
+        h1, .description
+        {
+            margin-left: 100px;
+            width: 400px;
+        }
+        
+        h1
+        {
+            margin-top: 40px;
+        }
+        
+            h1 em
+            {
+                font-size: 50%;
+                color: gray;
+            }
+       p
+       {
+          color: white;
+       }
+       A
+       {
+        COLOR: #ccccff;
+          TEXT-DECORATION: underline;
+          }
+          
+    -->
+    </style>
+    <script src="gsv.js" type="text/javascript"></script>
+    <script src="behaviour.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    <!--
+
+        Behaviour.register({
+            '.imageViewer' : function(el) {
+                prepareViewer(el, 'data/sdss/tiles', 500);
+            },
+            '.imageViewer .zoom .up' : function(el) {
+                el.onclick = function() {
+                    zoomImageUp(el.parentNode.parentNode, undefined);
+                    return false;
+                }
+            },
+            '.imageViewer .zoom .down' : function(el) {
+                el.onclick = function() {
+                    zoomImageDown(el.parentNode.parentNode, undefined);
+                    return false;
+                }
+            },
+            '.imageViewer .zoom .dump' : function(el) {
+                el.onclick = function() {
+                    dumpInfo(el.parentNode.parentNode);
+                    return false;
+                }
+            }
+        });
+    
+    //-->
+    </script>
+</head>
+<body>
+    <!--
+    See Behaviour.register above and behaviour.js for an explanation of
+    how the following HTML snippet is transformed in an image viewer.
+    -->
+<center>
+<table border=0 cellspacing=5 bgcolor=#333333 width=814>
+<tr>
+<td bgcolor=#000000 align=center><font size=6 face=arial color=white>Sloan Digital Sky Survey</font></td>
+</tr>
+<tr>
+<td>
+    <div class="imageViewer">
+        <div class="well"> </div>
+        <div class="surface"> </div>
+        <p class="status"> </p>
+        <p class="zoom">
+            <a class="up" href="#">+</a>
+            <a class="down" href="#">-</a>
+            <a class="dump" href="#">?</a>
+        </p>
+    </div>
+</td>
+</tr>
+</table>
+<p><font size=2 face=arial>Developed at <b>The
+National Center for Data Mining</b> with image data from the <b>Sloan Digital Sky Survey</b></font>
+</p>
+
+</center>
+</body>
+</html>
